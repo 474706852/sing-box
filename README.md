@@ -26,6 +26,170 @@
 - 一键更改 (端口/UUID/密码/域名/路径/加密方式/SNI/等...)
 - 还有更多...
 
+- Github 地址：https://github.com/233boy/sing-box添加SOCKS5
+我来帮您了解这个GitHub项目以及如何添加SOCKS5配置。首先让我获取这个项目的详细信息。
+
+读取
+https://github.com/233boy/sing-box
+查看
+现在让我获取这个项目的更多详细信息，包括如何配置SOCKS5：
+
+搜索
+233boy sing-box SOCKS5 配置教程
+查看
+让我获取233boy官方文档的详细信息：
+
+读取
+https://233boy.com/sing-box/sing-box-script/
+查看
+现在让我搜索更多关于配置SOCKS5的详细信息：
+
+搜索
+sing-box SOCKS5 配置 添加 教程
+查看
+让我获取一些具体的配置教程：
+
+读取
+https://icloudnative.io/posts/sing-box-tutorial/
+查看
+基于获取的信息，我来为您详细介绍如何在 233boy 的 sing-box 脚本中添加 SOCKS5 配置。
+
+233boy sing-box 脚本添加 SOCKS5 教程
+项目简介
+233boy/sing-box 是一个功能强大的 sing-box 一键安装与管理脚本，支持多种协议包括 SOCKS5。该脚本具有以下特点：
+
+🚀 快速安装，零学习成本
+🔧 自动化 TLS 配置
+📦 支持所有常用协议（包括 SOCKS5）
+🎯 简化所有配置流程
+💪 强大的快捷参数系统
+安装脚本
+首先需要安装 233boy 的 sing-box 脚本：
+
+Copybash <(wget -qO- -o- https://github.com/233boy/sing-box/raw/main/install.sh)
+系统要求：
+
+支持：Ubuntu、Debian、CentOS
+推荐：Ubuntu 22
+⚠️ 注意：CentOS 可能无法正常运行
+添加 SOCKS5 配置
+安装完成后，添加 SOCKS5 配置非常简单：
+
+基本添加命令
+Copy# 最简单的方式 - 自动配置所有参数
+sb add socks
+
+# 或使用完整命令
+sing-box add socks
+自定义参数添加
+Copy# 指定端口、用户名和密码
+sb add socks 端口 用户名 密码
+
+# 示例：端口233，用户名233boy，密码233boy.com
+sb add socks 233 233boy 233boy.com
+参数说明
+SOCKS5 配置的可选参数包括：
+
+端口 (port): 监听端口，使用 auto 自动分配
+用户名 (username): 认证用户名，使用 auto 自动生成
+密码 (password): 认证密码，使用 auto 自动生成
+管理 SOCKS5 配置
+查看配置
+Copy# 查看所有配置
+sb info
+
+# 查看 SOCKS 相关配置
+sb info socks
+修改配置
+Copy# 修改端口
+sb change socks port 新端口号
+sb change socks port auto  # 自动分配新端口
+
+# 修改密码
+sb change socks passwd 新密码
+sb change socks passwd auto  # 自动生成新密码
+
+# 修改用户名（如果支持）
+sb change socks username 新用户名
+获取连接信息
+Copy# 生成连接 URL
+sb url socks
+
+# 生成二维码
+sb qr socks
+删除配置
+Copy# 删除 SOCKS 配置
+sb del socks
+⚠️ 警告：删除操作不可逆，请谨慎使用
+
+快速管理命令
+脚本提供了多个快捷命令：
+
+Copy# 查看帮助
+sb help
+
+# 查看状态
+sb status
+
+# 重启服务
+sb restart
+
+# 查看日志
+sb log
+
+# 更新脚本/核心
+sb update      # 更新核心
+sb update sh   # 更新脚本
+使用 SOCKS5 代理
+配置完成后，你可以在各种客户端中使用：
+
+代理服务器信息
+类型: SOCKS5
+服务器: 你的服务器 IP
+端口: 配置时设置的端口
+用户名: 配置时设置的用户名
+密码: 配置时设置的密码
+客户端配置示例
+在浏览器、应用程序或系统代理设置中：
+
+SOCKS5 代理地址：你的服务器IP:端口
+如果需要认证，填入用户名和密码
+防火墙配置
+如果连接失败，可能需要开放端口：
+
+Copy# 关闭防火墙（谨慎使用）
+systemctl stop firewalld
+systemctl disable firewalld
+ufw disable
+测试连接
+可以使用在线工具测试端口连通性：
+
+访问 https://tcp.ping.pe/
+输入格式：你的IP:端口（如：1.1.1.1:1080）
+点击 Go 测试
+高级功能
+脚本目录结构
+脚本：/etc/sing-box/sh
+核心：/etc/sing-box/bin
+配置：/etc/sing-box/conf
+Web 管理界面
+脚本还支持 Clash API 管理界面，可通过 Web 界面管理配置。
+
+注意事项
+端口选择: 建议使用高位端口（1024-65535）
+安全性: 设置强密码，定期更换
+备份: 重要配置建议备份
+更新: 定期更新脚本和内核到最新版本
+相关链接
+GitHub 项目: https://github.com/233boy/sing-box
+官方文档: https://233boy.com/sing-box/sing-box-script/
+详细教程: https://233boy.com/sing-box/sing-box-server/
+通过以上步骤，您就可以成功在 233boy 的 sing-box 脚本中配置和使用 SOCKS5 代理了。整个过程非常简单，脚本已经将复杂的配置过程自动化，您只需要几个简单的命令就能完成配置。
+
+复制
+保存到Notion
+反馈
+
 # 设计理念
 
 设计理念为：**高效率，超快速，极易用**
